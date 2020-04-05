@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style> 
+input {
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+<label>Radius:</label>
+<br>
+<input id="radius" type="number" onchange="math()" value>
+<br>
+<label>Height:</label>
+<br>
+<input id="height" type="number" onchange="math()" value>
+<br>
+<label>Volume of a Cylinder:</label>
+<br>
+<input id="out" type="number" disabled value="3.1415926535898">
+<br>
+
+<script>
+function math() {
+	var radius = document.getElementById("radius").value;
+	var height = document.getElementById("height").value;
+	var out = document.getElementById("out");
+	out.value = Math.PI*radius*radius*height;
+}
+</script>
+</body>
+</html>
